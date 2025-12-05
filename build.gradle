@@ -1,17 +1,24 @@
 plugins {
     id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22' apply false
 }
 
 allprojects {
     group = 'org.first.tutorial'
     version = '0.1.0'
-
-    repositories {
-        mavenCentral()
-    }
 }
 
 subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType(Test).configureEach {
+        useJUnitPlatform()
+    }
+}
+
+configure(subprojects.findAll { it.path.startsWith(':java:') }) {
     apply plugin: 'java'
 
     java {
@@ -21,10 +28,19 @@ subprojects {
     }
 
     dependencies {
-        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+        testImplementation('org.junit.jupiter:junit-jupiter:5.10.2')
+    }
+}
+
+configure(subprojects.findAll { it.path.startsWith(':kotlin:') }) {
+    apply plugin: 'org.jetbrains.kotlin.jvm'
+
+    kotlin {
+        jvmToolchain(17)
     }
 
-    tasks.withType(Test).configureEach {
-        useJUnitPlatform()
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib"
+        testImplementation('org.junit.jupiter:junit-jupiter:5.10.2')
     }
 }

@@ -1,12 +1,16 @@
-# Java Basics for FIRST Robotics
+# Java/Kotlin Basics for FIRST Robotics
 
-A set of short, beginner-friendly Java exercises for high school robotics students. Each exercise is a separate Gradle subproject with its own README, starter code, and JUnit tests so one broken module will not block the rest.
+A set of short, beginner-friendly Java and Kotlin exercises for high school robotics students. Each exercise is a separate Gradle subproject with its own README, starter code, and JUnit tests so one broken module will not block the rest.
 
 ## How to use
 - Install JDK 17+ and Gradle (or use the included Gradle wrapper scripts once generated).
-- From the repo root, run `./gradlew :module-name:test` to work on a single module.
+- From the repo root, run `./gradlew :java:module-name:test` for the Java track or `./gradlew :kotlin:module-name:test` for the Kotlin track.
 - Each module README explains goals, starter files, and what to implement. Tests will fail until you complete the exercise.
 - Timebox each module to 15–30 minutes.
+
+## Layout
+- Java exercises live in `java/<module>`.
+- Kotlin mirrors live in `kotlin/<module>` and point to the Java README for full instructions, but code lives under `src/main/kotlin` and `src/test/kotlin`.
 
 ## Modules
 1. `1-setup-hello-world`
