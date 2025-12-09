@@ -13,15 +13,15 @@ A set of short, beginner-friendly Java and Kotlin exercises for high school robo
 - Kotlin mirrors live in `kotlin/<module>` and point to the Java README for full instructions, but code lives under `src/main/kotlin` and `src/test/kotlin`.
 
 ## Modules
-1. `1-setup-hello-world`
-2. `2-variables-and-types`
-3. `3-expressions-and-control-flow`
-4. `4-loops-and-iteration`
-5. `5-methods-and-parameters`
-6. `6-arrays-and-lists`
-7. `7-classes-and-objects`
-8. `8-encapsulation-and-immutability`
-9. `9-enums-and-switch`
+1. `01-setup-hello-world`
+2. `02-variables-and-types`
+3. `03-expressions-and-control-flow`
+4. `04-loops-and-iteration`
+5. `05-methods-and-parameters`
+6. `06-arrays-and-lists`
+7. `07-classes-and-objects`
+8. `08-encapsulation-and-immutability`
+9. `09-enums-and-switch`
 10. `10-error-handling`
 11. `11-basic-io`
 12. `12-unit-testing-basics`
